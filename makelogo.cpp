@@ -1,5 +1,5 @@
 #include <iostream>
-#include </home/morfic/NSDEV/logo/trinity2.h>
+#include </home/morfic/NSDEV/logo/trinity2.h> //this is the logo, saved in gimp as "C header" change this to include yours, don't try to build it with my path
 using namespace std;
 
 int main( )
