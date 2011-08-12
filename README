@@ -10,12 +10,11 @@ Build the makelogo binary:
 Chmod the binary to be executable:
 	chmod +x makelogo
 
-Run the binary and create the data file:
-	./makelogo > mybootlogo
+Run the binary and create the header file:
+	./makelogo > boot_logo.h
 
-Combine all the files to create the needed source file:
-	cat start_logo.h > my_logo_rgb24_wvga_portrait.h
-	cat mybootlogo >> my_logo_rgb24_wvga_portrait.h
+Combine the files to create the needed source file:
+	cat boot_logo.h > my_logo_rgb24_wvga_portrait.h
 	cat end_logo.h >> my_logo_rgb24_wvga_portrait.h
 
 Copy the file into the Kernel's source path:

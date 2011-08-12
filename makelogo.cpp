@@ -1,6 +1,6 @@
 #include <iostream>
 /*
- * Below is the logo, saved in gimp as type "C source code header".
+ * Below is the boot logo, saved in gimp as type "C source code header".
  * Change this to include your file's path.
  * Don't try to build it with my path.
 */
@@ -11,6 +11,8 @@ int main()
 {
 	int totalpixels = 480 * 800;
 	int breakcount = 1;
+	// Begin boot_logo
+	cout << "const unsigned long LOGO_RGB24[] = {\n";
 	for (int i = 0; i < totalpixels; i++)
 	{
 		unsigned char pixel[6] = "";
@@ -35,5 +37,8 @@ int main()
 			cout << ",";
 		}
 	}
+	cout << "};\n";
+	// End boot_logo
 	return 0;
 }
+

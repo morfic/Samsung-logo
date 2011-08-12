@@ -1,5 +1,6 @@
 Changelog:
 
 08-12-2011:
+Create full header (boot_logo.h) with makelogo binary.
 Miscellaneous cleanup.
 Added changelog and .gitignore.
