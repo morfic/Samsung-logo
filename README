@@ -7,7 +7,7 @@ Edit makelogo.cpp to include the path to the newly created "C source code header
 Build the makelogo binary:
 	g++ -o makelogo makelogo.cpp
 
-Chmod the binary to be executable:
+Chmod the binary to be executable (if necessary):
 	chmod +x makelogo
 
 Run the binary and create the header file:
