@@ -25,12 +25,19 @@ SPACER()
 {
 	echo "*"
 }
+START_SCRIPT()
+{
+	TIME_START=$(date +%s)
+	SPACER
+}
 SHOW_COMPLETED()
 {
 	SPACER
 	echo "Script completed."
 	TIME_END=$(date +%s)
 	echo "Total time: $(($TIME_END - $TIME_START)) seconds."
+	SPACER
+	exit
 }
 BUILD_BINARY()
 {
@@ -63,12 +70,9 @@ CLEANUP()
 }
 
 #main
-TIME_START=$(date +%s)
-SPACER
+START_SCRIPT
 BUILD_BINARY
 CREATE_LOGO
 CLEANUP
 SHOW_COMPLETED
-SPACER
-exit
 
