@@ -1,6 +1,7 @@
 Changelog:
 
 08-12-2011:
+Ignoring output file (logo_rgb24_wvga_portrait_custom.h).
 Added createBootLogo.sh script for ease of use.
 Minor README modification.
 Added sample "C source code header" file created with gimp (boot_logo_gimp.h) and adjusted the include path.
