@@ -4,7 +4,7 @@
  * Change this to include your file's path.
  * Don't try to build it with my path.
 */
-#include </home/morfic/NSDEV/logo/trinity2.h>
+#include </home/nubecoder/android/projects/Samsung-logo/boot_logo_gimp.h>
 using namespace std;
 
 int main()

@@ -1,6 +1,7 @@
 Changelog:
 
 08-12-2011:
+Added sample "C source code header" file created with gimp (boot_logo_gimp.h) and adjusted the include path.
 Renamed end_logo.h to charge_logo.h.
 Create full header (boot_logo.h) with makelogo binary.
 Miscellaneous cleanup.
