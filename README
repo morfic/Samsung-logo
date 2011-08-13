@@ -1,17 +1,17 @@
 
 Instructions:
 
-Create a 480x800 (24bit) RGB color image in gimp and save as "C source code header".
-Edit makelogo.cpp to include the path to the newly created "C source code header" file.
+Create a boot image in gimp (480x800 24bit RGB color) and save as "C source code header".
+Edit makebootlogo.cpp to include the path to the newly created "C source code header" file.
+
+Create a charge image in gimp (480x800 24bit RGB color) and save as "C source code header".
+Edit makechargelogo.cpp to include the path to the newly created "C source code header" file.
 
 Run the createBootLogo.sh script:
-	./createBootLogo.sh
+	./createLogos.sh
 
 Copy the file into the Kernel's source path:
 	cp logo_rgb24_wvga_portrait_custom.h ../Kernel/drivers/video/samsung/logo_rgb24_wvga_portrait.h
 
 Compile your kernel as usual.
-
-look at end_logo.h if you plan on replacing the charge image.
-I never got to just doing it all at once, that would be on my todo list.
 
