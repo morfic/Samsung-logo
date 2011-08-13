@@ -17,14 +17,9 @@
 #defines
 DST_FILE="logo_rgb24_wvga_portrait_custom.h"
 BOOT_LOGO="custom_boot_logo.h"
-<<<<<<< HEAD
-CHARGE_LOGO="charge_logo.h"
-BOOT_BINARY="makebootlogo"
-=======
 CHARGE_LOGO="custom_charge_logo.h"
 BOOT_BINARY="makebootlogo"
 CHARGE_BINARY="makechargelogo"
->>>>>>> nubecoder/dual-binaries
 
 #functions
 SPACER()
@@ -77,25 +72,17 @@ CLEANUP()
 	echo "Cleaning up files..."
 	# remove files
 	rm -f $BOOT_LOGO
-<<<<<<< HEAD
-	rm -f $BOOT_BINARY
-=======
 	rm -f $CHARGE_LOGO
 	rm -f $BOOT_BINARY
 	rm -f $CHARGE_BINARY
->>>>>>> nubecoder/dual-binaries
 }
 
 #main
 START_SCRIPT
 BUILD_BINARY "$BOOT_BINARY"
-<<<<<<< HEAD
-CREATE_LOGO "$BOOT_LOGO" "$BOOT_BINARY"
-=======
 BUILD_BINARY "$CHARGE_BINARY"
 CREATE_LOGO "$BOOT_LOGO" "$BOOT_BINARY"
 CREATE_LOGO "$CHARGE_LOGO" "$CHARGE_BINARY"
->>>>>>> nubecoder/dual-binaries
 CREATE_DST_FILE "$BOOT_LOGO" "$CHARGE_LOGO"
 CLEANUP
 SHOW_COMPLETED
