@@ -1,6 +1,7 @@
 Changelog:
 
 08-12-2011:
+Changes to createBootLogo.sh for charge logo support.
 Added sample charge logo.
 Refactoring for charge logo support (dual binaries).
 Minor changes to creatBootLogo.sh.
