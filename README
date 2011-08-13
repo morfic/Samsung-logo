@@ -3,13 +3,24 @@ Instructions:
 Create a boot image in gimp (480x800 24bit RGB color) and save as "C source code header".
 Edit makebootlogo.cpp to include the path to the newly created "C source code header" file.
 
+<<<<<<< HEAD
 Run the createLogos.sh script:
 ./createLogos.sh
+=======
+Create a charge image in gimp (480x800 24bit RGB color) and save as "C source code header".
+Edit makechargelogo.cpp to include the path to the newly created "C source code header" file.
+
+Run the createLogos.sh script:
+	./createLogos.sh
+>>>>>>> nubecoder/dual-binaries
 
 Copy the file into the Kernel's source path:
 cp logo_rgb24_wvga_portrait_custom.h ../Kernel/drivers/video/samsung/logo_rgb24_wvga_portrait.h
 
 Compile your kernel as usual.
 
+<<<<<<< HEAD
 Look to the dual-binaries branch if you plan on replacing the charge image.
 
+=======
+>>>>>>> nubecoder/dual-binaries
