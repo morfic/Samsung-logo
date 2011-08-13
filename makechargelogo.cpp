@@ -9,7 +9,7 @@ using namespace std;
 
 int main()
 {
-	int totalpixels = 480 * 800;
+	int totalpixels = width * height;
 	int breakcount = 1;
 	// Begin charge_logo
 	cout << "const unsigned long charging[] = {\n";
