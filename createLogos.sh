@@ -16,9 +16,9 @@
 
 #defines
 DST_FILE="logo_rgb24_wvga_portrait_custom.h"
-BINARY="makelogo"
-BOOT_LOGO="boot_logo.h"
+BOOT_LOGO="custom_boot_logo.h"
 CHARGE_LOGO="charge_logo.h"
+BOOT_BINARY="makebootlogo"
 
 #functions
 SPACER()
@@ -41,38 +41,44 @@ SHOW_COMPLETED()
 }
 BUILD_BINARY()
 {
-	echo "Building binary..."
+	echo "Building $1 binary..."
 	# remove old files
-	rm -f $BINARY
+	rm -f $1
 	# build binary
-	local RESULT=$(g++ -o $BINARY $BINARY.cpp 2>&1 >/dev/null)
+	local RESULT=$(g++ -o $1 $1.cpp 2>&1 >/dev/null)
 	# make binary executable
-	chmod +x $BINARY
+	chmod +x $1
 }
 CREATE_LOGO()
 {
-	echo "Creating bootlogo..."
+	echo "Creating $1..."
 	# remove old files
-	rm -f $BOOT_LOGO
+	rm -f $1
+	# generate usable data
+	./$2 > $1
+}
+CREATE_DST_FILE()
+{
+	echo "Creating $DST_FILE..."
+	# remove old files
 	rm -f $DST_FILE
-	# convert header to usable data
-	./$BINARY > $BOOT_LOGO
 	# output to file
-	cat $BOOT_LOGO > $DST_FILE
-	cat $CHARGE_LOGO >> $DST_FILE
+	cat $1 > $DST_FILE
+	cat $2 >> $DST_FILE
 }
 CLEANUP()
 {
 	echo "Cleaning up files..."
 	# remove files
 	rm -f $BOOT_LOGO
-	rm -f $BINARY
+	rm -f $BOOT_BINARY
 }
 
 #main
 START_SCRIPT
-BUILD_BINARY
-CREATE_LOGO
+BUILD_BINARY "$BOOT_BINARY"
+CREATE_LOGO "$BOOT_LOGO" "$BOOT_BINARY"
+CREATE_DST_FILE "$BOOT_LOGO" "$CHARGE_LOGO"
 CLEANUP
 SHOW_COMPLETED
 
