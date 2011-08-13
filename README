@@ -7,7 +7,7 @@ Edit makebootlogo.cpp to include the path to the newly created "C source code he
 Create a charge image in gimp (480x800 24bit RGB color) and save as "C source code header".
 Edit makechargelogo.cpp to include the path to the newly created "C source code header" file.
 
-Run the createBootLogo.sh script:
+Run the createLogos.sh script:
 	./createLogos.sh
 
 Copy the file into the Kernel's source path:
