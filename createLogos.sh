@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# createBootLogo.sh
+# createLogos.sh
 #
 # for use with morfic's Samsung-logo binary
 # https://github.com/morfic/Samsung-logo/
