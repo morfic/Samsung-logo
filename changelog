@@ -1,6 +1,7 @@
 Changelog:
 
 08-12-2011:
+Refactoring for charge logo support (dual binaries).
 Minor changes to creatBootLogo.sh.
 Ignoring output file (logo_rgb24_wvga_portrait_custom.h).
 Added createBootLogo.sh script for ease of use.
