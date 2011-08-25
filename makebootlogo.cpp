@@ -9,7 +9,7 @@ using namespace std;
 
 int main()
 {
-	int totalpixels = 480 * 800;
+	int totalpixels = width * height;
 	int breakcount = 1;
 	// Begin boot_logo
 	cout << "const unsigned long LOGO_RGB24[] = {\n";
